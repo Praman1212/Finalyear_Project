@@ -6,18 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Login | E-Shopper</title>
-
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/prettyPhoto.css') }}">
     <link rel="stylesheet" href="{{ asset('css/price-range.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">      
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
@@ -66,11 +61,12 @@
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<button type="submit" class="btn btn-default">Signup</button>
+						<form action="{{ route('saveUser') }}" method="POST">
+							@csrf
+							<input type="text" name="name" placeholder="Name"/>
+							<input type="email" name="email" placeholder="Email Address"/>
+							<input type="password" name="password" placeholder="Password"/>
+							<button type="submit" name="submit" class="btn btn-default">Signup</button>
 						</form>
 					</div><!--/sign up form-->
 				</div>
