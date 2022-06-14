@@ -19,13 +19,13 @@ Route::get('/checkout',[ProductController::class,'checkout']);
 
 // Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home-index');
 
 // Admin Routes
-Route::get('/admin/index',[AdminController::class,'index']);
+Route::get('/admin/index',[AdminController::class,'index'])->name('home-index');
 
 // Admin View Products
-Route::get('/admin/details/viewProducts',[AdminController::class,'viewProducts'])->name('viewProducts');
+Route::get('/admin/productcrud',[AdminController::class,'viewProducts'])->name('product-crud');
 
 // Add Products
 

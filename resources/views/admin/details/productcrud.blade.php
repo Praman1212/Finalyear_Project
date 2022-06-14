@@ -33,7 +33,7 @@
                                     <td>{{ $detail->price}} </td>
                                     <td>{{ $detail->category}} </td>
                                     <td>{{ $detail->image}} </td>
-                                    <td><input type="button"  class="btn btn-success " name="edit" value="Edit"> </td>
+                                    <td><button class="btn btn-success" name="edit">Edit</button> </td>
                                     <td><input type="button"  class="btn btn-danger " name="delete" value="Delete"> </td>
                                 </tr>
                                 @endforeach
