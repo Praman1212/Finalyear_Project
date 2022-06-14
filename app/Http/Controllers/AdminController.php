@@ -13,8 +13,8 @@ class AdminController extends Controller
     public function productForm(){
         return view('admin.productForm');
     }
-    public function manageCategory(){
-        return view('admin.category.manageCategory');
+    public function categoryForm(){
+        return view('admin.categoryForm');
     }
 
     // To add the products it will save in this function

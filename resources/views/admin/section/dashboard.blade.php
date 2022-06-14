@@ -21,7 +21,7 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="">
+        <a class="nav-link collapsed" >
           <i class="bi bi-menu-button-wide"></i><span>Category CRUD</span><i class="bi bi-chevron ms-auto"></i>
         </a>
       </li><!-- End Components Nav -->
