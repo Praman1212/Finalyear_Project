@@ -21,10 +21,22 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" >
-          <i class="bi bi-menu-button-wide"></i><span>Category CRUD</span><i class="bi bi-chevron ms-auto"></i>
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Category CRUD</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-      </li><!-- End Components Nav -->
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>Add Category</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bi bi-circle"></i><span>View Category</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
@@ -39,16 +51,6 @@
           <li>
             <a href="{{route('product-crud')}}">
               <i class="bi bi-circle"></i><span>View Products</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="bi bi-circle"></i><span>Delete Products</span>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="bi bi-circle"></i><span>Add Products</span>
             </a>
           </li>
         </ul>
