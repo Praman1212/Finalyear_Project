@@ -28,7 +28,7 @@
                                     <td>{{ $detail->category_id }}</td>
                                     <td>{{ $detail->category_name}} </td>
                                     <td><button class="btn btn-success" name="edit">Edit</button> </td>
-                                    <td><input type="button"  class="btn btn-danger " name="delete" value="Delete"> </td>
+                                    <td><button class="btn btn-danger"></button></td>
                                 </tr>
                                 @endforeach
                             </tbody>
