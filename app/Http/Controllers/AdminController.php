@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\saveProducts;
+use App\Models\saveCategory;
 use Illuminate\Http\Request;
 
 // For products
@@ -27,7 +28,7 @@ class AdminController extends Controller
         $product->category = $req->category;
         $product->image = $req->image;
         $product->save();
-        return redirect();
+        return redirect('/admin/index');
     }
 
     // Details about the products
@@ -36,8 +37,18 @@ class AdminController extends Controller
         $details = saveProducts::all();
         return view('admin.details.productcrud', compact('details'));
     }
+
     // For category
+
     public function categoryForm(){
+        return view('admin.categoryForm');
+    }
+
+    public function saveCategory(Request $req){
+        $category =  new saveCategory;
+        $category->category_name = $req->category_name;
+        $category->category_id = $req->category_id;
+        $category->save();
         return view('admin.categoryForm');
     }
 }

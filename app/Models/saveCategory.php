@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class saveCategory extends Model
 {
     use HasFactory;
+    protected $table = "add_category";
+    protected $fillable = ['category_name','category_id'];
 }
