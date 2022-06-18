@@ -28,29 +28,11 @@
                   <div class="col-sm-10">
                     <input type="text" name="category_id" class="form-control">
                   </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputNumber" class="col-sm-2 col-form-label">Price</label>
-                  <div class="col-sm-10">
-                    <input type="number" name="price" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputText" class="col-sm-2 col-form-label">Category</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="category" class="form-control">
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <label for="inputFile" class="col-sm-2 col-form-label">File Upload</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" name="image" type="file" id="formFile">
-                  </div>
-                </div>            
+                </div>        
                 <div class="row mb-3">
                   <!-- <label class="col-sm-2 col-form-label">Submit Button</label> -->
                   <div class="col-sm-10">
-                    <button type="submit" name="submit" class="btn btn-primary">Add Product</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Add Category</button>
                   </div>
                 </div>
 

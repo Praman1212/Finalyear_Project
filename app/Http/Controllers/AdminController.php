@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\saveProducts;
 use Illuminate\Http\Request;
 
+// For products
 class AdminController extends Controller
 {
     public function index(){
@@ -13,9 +14,9 @@ class AdminController extends Controller
     public function productForm(){
         return view('admin.productForm');
     }
-    public function categoryForm(){
-        return view('admin.categoryForm');
-    }
+    // public function categoryForm(){
+    //     return view('admin.categoryForm');
+    // }
 
     // To add the products it will save in this function
     public function saveProducts(Request $req){
@@ -34,5 +35,9 @@ class AdminController extends Controller
     {
         $details = saveProducts::all();
         return view('admin.details.productcrud', compact('details'));
+    }
+    // For category
+    public function categoryForm(){
+        return view('admin.categoryForm');
     }
 }

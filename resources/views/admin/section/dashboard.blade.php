@@ -45,12 +45,12 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
+            <a href="{{ route('categoryForm') }}">
               <i class="bi bi-circle"></i><span>Add Category</span>
             </a>
           </li>
           <li>
-            <a href="tables-data.html">
+            <a href="">
               <i class="bi bi-circle"></i><span>View Category</span>
             </a>
           </li>
