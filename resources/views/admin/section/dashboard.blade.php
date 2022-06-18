@@ -50,7 +50,7 @@
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="{{route('view-category')}}">
               <i class="bi bi-circle"></i><span>View Category</span>
             </a>
           </li>

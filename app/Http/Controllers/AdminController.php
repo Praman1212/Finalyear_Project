@@ -15,9 +15,9 @@ class AdminController extends Controller
     public function productForm(){
         return view('admin.productForm');
     }
-    // public function categoryForm(){
-    //     return view('admin.categoryForm');
-    // }
+    public function categoryForm(){
+        return view('admin.categoryForm');
+    }
 
     // To add the products it will save in this function
     public function saveProducts(Request $req){
@@ -40,9 +40,7 @@ class AdminController extends Controller
 
     // For category
 
-    public function categoryForm(){
-        return view('admin.categoryForm');
-    }
+
 
     public function saveCategory(Request $req){
         $category =  new saveCategory;
@@ -50,5 +48,10 @@ class AdminController extends Controller
         $category->category_id = $req->category_id;
         $category->save();
         return view('admin.categoryForm');
+    }
+
+    public function viewCategory(){
+        $details = saveCategory::all();
+        return view('admin.details.categorycrud',compact('details'));
     }
 }
