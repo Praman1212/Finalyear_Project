@@ -10,16 +10,6 @@ class ProductController extends Controller
     public function index(){
         return view('index');
     }
-    public function saveUser(Request $request){
-        $user = new Registers;
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->save();
-        return redirect('login');
-        // return $request->input();
-
-    }
     public function product_details(){
         return view('product-details');
     }
