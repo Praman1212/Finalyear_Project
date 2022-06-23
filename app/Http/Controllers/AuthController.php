@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Registers;
+use App\Models\auth;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller
@@ -18,13 +18,11 @@ class AuthController extends Controller
     // In this function user is register
     public function saveUser(Request $request)
     {
-        $user = new Registers;
+        $user = new auth;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
         $user->save();
         return redirect('login');
-        // return $request->input();
-
     }
 }

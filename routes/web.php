@@ -4,7 +4,7 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
-use App\Models\Registers;
+use App\Models\auth;
 // use Illuminate\Support\Facades\Auth;
 
 // User Route
@@ -14,7 +14,7 @@ Route::get('/login',[AuthController::class,'login'])->name('login-user');
 
 Route::get('/register',[AuthController::class,'register'])->name('register-user');
 
-Route::post('/saveUser',[AuthController::class,'saveUser'])->name('saveUser');
+Route::post('/saveUser',[AuthController::class,'saveUser'])->name('save-User');
 
 Route::get('/product-details',[ProductController::class,'product_details']);
 
