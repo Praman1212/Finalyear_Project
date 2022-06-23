@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\auth;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AuthController extends Controller
 {
@@ -18,7 +18,7 @@ class AuthController extends Controller
     // In this function user is register
     public function saveUser(Request $request)
     {
-        $user = new auth;
+        $user = new User;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
