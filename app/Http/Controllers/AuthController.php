@@ -25,4 +25,7 @@ class AuthController extends Controller
         $user->save();
         return redirect('login');
     }
+    public function getUser(){
+        
+    }
 }

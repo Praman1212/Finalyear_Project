@@ -16,6 +16,8 @@ Route::get('/register',[AuthController::class,'register'])->name('register-user'
 
 Route::post('/saveUser',[AuthController::class,'saveUser'])->name('save-User');
 
+Route::post('/getUser',[AuthController::class,'getUser'])->name('get-User');
+
 Route::get('/product-details',[ProductController::class,'product_details']);
 
 Route::get('/checkout',[ProductController::class,'checkout']);
