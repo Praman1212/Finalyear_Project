@@ -32,7 +32,7 @@
                                     <td>{{ $detail->product_name}} </td>
                                     <td>{{ $detail->price}} </td>
                                     <td>{{ $detail->category}} </td>
-                                    <td>{{ $detail->image}} </td>
+                                    <td><img src="{{ asset($detail->image) }}" /></td>
                                     <td><button class="btn btn-success" name="edit">Edit</button> </td>
                                     <td><button href="{{url('delete/'.$detail->id)}}" class="btn btn-danger" >Delete</button> </td>
                                 </tr>

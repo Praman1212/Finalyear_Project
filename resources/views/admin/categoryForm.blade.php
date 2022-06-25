@@ -16,11 +16,23 @@
 
               <!-- General Form Elements -->
               <form action="{{route('saveCategory')}}" method="POST" enctype="multipart/form-data">
-                  @csrf
+                  @csrf                
+                  <!-- <div class="col-md-3">
+                  <label for="validationDefault04" class="form-label">State</label>
+                  <select class="form-select" id="validationDefault04" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div> -->
+
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">Category Name</label>
                   <div class="col-sm-10">
-                    <input type="text" name="category_name" class="form-control">
+                    <select class="form-select" name="" id="">
+                      <option selected disabled value="">Choose..</option>
+                      <option value="0">Jersey</option>
+                      <option value="1"></option>
+                    </select>
                   </div>
                 </div>
                 <div class="row mb-3">

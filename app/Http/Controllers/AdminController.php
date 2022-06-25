@@ -26,7 +26,7 @@ class AdminController extends Controller
         $product->product_id = $req->product_id;
         $product->price = $req->price;
         $product->category = $req->category;
-        $product->image = $req->image;
+        $product->image = $req->image->store('img');
         $product->save();
         return redirect('/admin/index');
     }
