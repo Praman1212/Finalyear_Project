@@ -20,6 +20,11 @@ Route::get('/product-details',[ProductController::class,'product_details']);
 
 Route::get('/checkout',[ProductController::class,'checkout']);
 
+Route::get('/cart',[ProductController::class,'cart']);
+
+Route::get('/contactus',[ProductController::class,'contactus']);
+
+
 // Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home-index');

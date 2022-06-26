@@ -21,15 +21,23 @@ class AdminController extends Controller
 
     // To add the products it will save in this function
     public function saveProducts(Request $req){
+
+        if(request('image'))
+        {
+            $ext = request('image').getOriginalExtention();
+            $filename = time().'.'.$ext;
+            request('image')->move('upload',$filename);
+        }
         $product = new saveProducts;
         $product->product_name = $req->product_name;
         $product->product_id = $req->product_id;
         $product->price = $req->price;
         $product->category = $req->category;
-        $product->image = $req->image;
+        $product->image = $filename;
         $product->save();
         return redirect('/admin/index');
     }
+    
 
     // Details about the products
     public function viewProducts()

@@ -52,7 +52,7 @@
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
 								<!-- <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
 								<!-- <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
-								<li><a href=""><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="{{ URL::to('/cart') }}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><a href="{{ route('login-user')}}"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -81,18 +81,12 @@
                                         <li><a href="shop.html">Products</a></li>
 										<li><a href="{{ URL::to('product-details') }}">Product Details</a></li> 
 										<li><a href="{{ URL::to('checkout') }}">Checkout</a></li> 
-										<li><a href="{{ URL::to('cart') }}">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
+										<li><a href="{{ URL::to('/cart') }}">Cart</a></li> 
+										<li><a href="{{ route('login-user')}}">Login</a></li> 
                                     </ul>
                                 </li> 
-								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="blog.html">Blog List</a></li>
-										<li><a href="blog-single.html">Blog Single</a></li>
-                                    </ul>
-                                </li> 
-								<li><a href="404.html">404</a></li>
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="{{ URL::to('checkout') }}">Checkout</a></li> 
+								<li><a href="{{ URL::to('/contactus') }}">Contact</a></li>
 							</ul>
 						</div>
 					</div>
@@ -120,39 +114,39 @@
 						<div class="carousel-inner">
 							<div class="item active">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free E-Commerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h1><span>HAMRO</span>-COLLECTION</h1>
+									<h2>Facilitating You</h2>
+									<p>Online Shopping Site which provides different items on Clothing, Footwear, Sunglasses and many more.</p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl1.jpg" class="girl img-responsive" alt="" />
+									<img src="images/home/zz.jpg" class="girl img-responsive" alt="" />
 									<img src="images/home/pricing.png"  class="pricing" alt="" />
 								</div>
 							</div>
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>100% Responsive Design</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+								<h1><span>HAMRO</span>-COLLECTION</h1>
+									<h2>Facilitating You</h2>
+									<p>Online Shopping Site which provides different items on Clothing, Footwear, Sunglasses and many more.</p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl2.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pricing.png"  class="pricing" alt="" />
+									<img src="images/jacket/1.png" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing1.png"  class="pricing" alt="" />
 								</div>
 							</div>
 							
 							<div class="item">
 								<div class="col-sm-6">
-									<h1><span>E</span>-SHOPPER</h1>
-									<h2>Free Ecommerce Template</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+									<h1><span>HAMRO</span>-COLLECTION</h1>
+									<h2>Facilitating You</h2>
+									<p>Online Shopping Site which provides different items on Clothing, Footwear, Sunglasses and many more.</p>
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/home/girl3.jpg" class="girl img-responsive" alt="" />
-									<img src="images/home/pricing.png" class="pricing" alt="" />
+									<img src="images/shoes/airjordan44.png" class="girl img-responsive" alt="" />
+									<img src="images/home/pricing2.png" class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -389,11 +383,11 @@
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#shoes" data-toggle="tab">Shoes</a></li>
-								<li><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
-								<li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
-								<li><a href="#kids" data-toggle="tab">Pants</a></li>
-								<li><a href="#poloshirt" data-toggle="tab">Shirts</a></li>
-								<li><a href="#poloshirt" data-toggle="tab">Jackets</a></li>
+								<li><a href="#shirts" data-toggle="tab">Shirts</a></li>
+								<li><a href="#sunglasses" data-toggle="tab">Sunglasses</a></li>
+								<li><a href="#pants" data-toggle="tab">Pants</a></li>
+								<li><a href="#tshirts" data-toggle="tab">T-Shirts</a></li>
+								<li><a href="#jackets" data-toggle="tab">Jackets</a></li>
 							</ul>
 						</div>
 						<div class="tab-content">
@@ -452,14 +446,14 @@
 								</div>
 							</div>
 							
-							<div class="tab-pane fade" id="tshirt" >
+							<div class="tab-pane fade" id="shirts" >
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/shirt/jeans.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<h2>Rs 1500</h2>
+												<p>Blue Jeans Shirt</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -471,8 +465,8 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/shirt/hmgoepprod.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<h2>Rs 1200</h2>
+												<p>Checked Shirt</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -484,8 +478,8 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/shirt/ezgif-4-2600637ea4.png" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<h2>Rs 1300</h2>
+												<p>Thug Life Shirt</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -497,8 +491,8 @@
 										<div class="single-products">
 											<div class="productinfo text-center">
 												<img src="images/shirt/aaa.jpeg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<h2>Rs 1150</h2>
+												<p>Formal Shirt</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -507,14 +501,14 @@
 								</div>
 							</div>
 							
-							<div class="tab-pane fade" id="sunglass" >
+							<div class="tab-pane fade" id="sunglasses" >
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="images/sunglasses/1.png" alt="" />
+												<h2>Rs 8500</h2>
+												<p>Tifosi Alliant Red</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -525,9 +519,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="images/sunglasses/ezgif-4-194089b31c.png" alt="" />
+												<h2>Rs 1800</h2>
+												<p>Tom Hardy Sunglass</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -538,9 +532,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="images/sunglasses/2e581f08fecb82649205799a8c8132c9.jpg" alt="" />
+												<h2>Rs 1450</h2>
+												<p>Printed Sunglasses</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -551,64 +545,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<div class="tab-pane fade" id="kids" >
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="images/sunglasses/ezgif-4-7ca90943d9.png" alt="" />
+												<h2>Rs 1650</h2>
+												<p>Fashionable Sunglasses</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -617,14 +556,14 @@
 								</div>
 							</div>
 							
-							<div class="tab-pane fade" id="poloshirt" >
+							<div class="tab-pane fade" id="pants" >
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="images/pants/zz.png" alt="" />
+												<h2>Rs 2500</h2>
+												<p>Box Pant For Men</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -635,9 +574,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="images/pants/men cottonn.jpg" alt="" />
+												<h2>Rs 2200</h2>
+												<p>Cotton Pant</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -648,9 +587,9 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="images/pants/e160b396-d807-4199-a21f-c38c6f0cdb49_1.8c0682269ea2cda0a3fd3ed30e5c71a9.jpeg" alt="" />
+												<h2>Rs 2700</h2>
+												<p>Blue Jeans</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -661,9 +600,118 @@
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="images/pants/casual  mm.jpg" alt="" />
+												<h2>Rs 1700</h2>
+												<p>Casual Pant</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="tab-pane fade" id="tshirts" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/tshirt/adidas.jpg" alt="" />
+												<h2>Rs 1350</h2>
+												<p>Adidas T-shirt</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/tshirt/download.jpg" alt="" />
+												<h2>Rs 1500</h2>
+												<p>Green Polo T-Shirt</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/tshirt/ezgif-4-393418f701.png" alt="" />
+												<h2>Rs 800</h2>
+												<p>Pug T-Shirt</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/tshirt/ezgif-4-dd6ca58d8e.png" alt="" />
+												<h2>Rs 1600</h2>
+												<p>Nike T-Shirt</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="jackets" >
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/jacket/p131-341_image_mig_15.png" alt="" />
+												<h2>Rs 5500</h2>
+												<p>Black Leather Jacket</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/jacket/qw.jpg" alt="" />
+												<h2>Rs 3200</h2>
+												<p>Prozis Jacket</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/jacket/Beta-AR-Jacket-(NAM)-Conifer.jpg" alt="" />
+												<h2>Rs 2700</h2>
+												<p>AR Jacket</p>
+												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<div class="product-image-wrapper">
+										<div class="single-products">
+											<div class="productinfo text-center">
+												<img src="images/jacket/15041123vg_13_r.jpg" alt="" />
+												<h2>Rs 3500</h2>
+												<p>Jeans Jacket</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 											
@@ -782,75 +830,75 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="companyinfo">
-							<h2><span>e</span>-shopper</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor</p>
+							<h2><span>Hamro</span>-collection</h2>
+							<p>Vlogs of Products used by our satisfied Customers.</p>
 						</div>
 					</div>
 					<div class="col-sm-7">
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
-								<a href="#">
+								<a href="https://www.youtube.com/watch?v=9qfmB0VghMg">
 									<div class="iframe-img">
-										<img src="images/home/iframe1.png" alt="" />
+										<img src="images/home/wow.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Lichhi Hunt</p>
+								<h2>17 June 2022</h2>
 							</div>
 						</div>
 						
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
-								<a href="#">
+								<a href="https://www.youtube.com/watch?v=YSSCOQGkR7I">
 									<div class="iframe-img">
-										<img src="images/home/iframe2.png" alt="" />
+										<img src="images/home/new1.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Final Year Tour</p>
+								<h2>30 May 2022</h2>
 							</div>
 						</div>
 						
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
-								<a href="#">
+								<a href="https://www.youtube.com/c/ShivaGyawali">
 									<div class="iframe-img">
-										<img src="images/home/iframe3.png" alt="" />
+										<img src="images/home/new2.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Engineering Classes</p>
+								<h2>Since 13 June 2017</h2>
 							</div>
 						</div>
 						
 						<div class="col-sm-3">
 							<div class="video-gallery text-center">
-								<a href="#">
+								<a href="https://www.youtube.com/c/YoungRider9">
 									<div class="iframe-img">
-										<img src="images/home/iframe4.png" alt="" />
+										<img src="images/home/new3.png" alt="" />
 									</div>
 									<div class="overlay-icon">
 										<i class="fa fa-play-circle-o"></i>
 									</div>
 								</a>
-								<p>Circle of Hands</p>
-								<h2>24 DEC 2014</h2>
+								<p>Vlogger Praman</p>
+								<h2>Since 11 Sept 2021</h2>
 							</div>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="address">
 							<img src="images/home/map.png" alt="" />
-							<p>505 S Atlantic Ave Virginia Beach, VA(Virginia)</p>
+							<p>Final Year Project, Nepal Engineering College, Changunarayan, Bhaktapur</p>
 						</div>
 					</div>
 				</div>
@@ -926,8 +974,8 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
+					<p class="pull-left">Copyright © 2022 HAMROCOLLECTION Inc. All rights reserved.</p>
+					<p class="pull-right">Designed by <span><a target="_blank" href="https://www.facebook.com/praman.ghimire.921">Chill Guys</a></span></p>
 				</div>
 			</div>
 		</div>
