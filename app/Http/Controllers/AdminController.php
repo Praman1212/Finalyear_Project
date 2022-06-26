@@ -20,14 +20,34 @@ class AdminController extends Controller
     }
 
     // To add the products it will save in this function
-    public function saveProducts(Request $req){
-        $product = new saveProducts;
-        $product->product_name = $req->product_name;
-        $product->product_id = $req->product_id;
-        $product->price = $req->price;
-        $product->category = $req->category;
-        $product->image = $req->image->store('img');
-        $product->save();
+    public function saveProducts(Request $request){
+        // $product = new saveProducts;
+        // $product->product_name = $req->product_name;
+        // $product->product_id = $req->product_id;
+        // $product->price = $req->price;
+        // $product->category = $req->category;
+        // $product->image = $req->image->store('img');
+        // $product->save();
+        // return redirect('/admin/index');
+        $request->validate([
+            'product_name' => 'required',
+            'product_id' => 'required',
+            'price' => 'required',
+            'category' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+  
+        $input = $request->all();
+  
+        if ($image = $request->file('image')) {
+            $destinationPath = 'image/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        }
+    
+        saveProducts::create($input);
+     
         return redirect('/admin/index');
     }
 
