@@ -237,15 +237,12 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-<<<<<<< HEAD
 											<img src="images/shoes/shoes.png" alt="" />
 											<h2>$56</h2>
 											<p>Easy Polo Black Edition</p>
-=======
 											<img src="images/shoes/airjordan5.png" alt="" />
 											<h2>Rs 8000</h2>
 											<p>Nike Air Jordan 5</p>
->>>>>>> da043b8d83aa23f4d8fb9593e2f33282b241a326
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
 										<!--<div class="product-overlay">
