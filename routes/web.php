@@ -46,7 +46,7 @@ Route::post('/saveCategory',[AdminController::class,'saveCategory'])->name('save
 Route::get('/admin/categorycrud',[AdminController::class,'viewCategory'])->name('view-category');
 // Edit of view products
 Route::get('edit',[AdminController::class],'Edit')->name('edit');
-Route::get('delete/{id}',[AdminController::class],'productDelete')->name('product-delete');
+Route::post('delete/{id}',[AdminController::class],'productDelete')->name('delete-product');
 
 // View Products
 // Route::get('/admin')

@@ -33,8 +33,14 @@
                                     <td>{{ $detail->price}} </td>
                                     <td>{{ $detail->category}} </td>
                                     <td><img src="{{ asset('Image/'.$detail->image) }}" style="width: 50px; height:50px;"></td>
-                                    <td><button class="btn btn-success" name="edit">Edit</button> </td>
-                                    <td><button href="{{url('delete/'.$detail->id)}}" class="btn btn-danger" >Delete</button> </td>
+                                    <td>
+                                        <form action="{{ url('delete',$detail->id) }}" method="POST">
+                                            <a class="btn btn-primary" href="">Edit</a>
+                                            @csrf
+                                            
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

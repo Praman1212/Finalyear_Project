@@ -21,14 +21,7 @@ class AdminController extends Controller
 
     // To add the products it will save in this function
     public function saveProducts(Request $request){
-        // $product = new saveProducts;
-        // $product->product_name = $req->product_name;
-        // $product->product_id = $req->product_id;
-        // $product->price = $req->price;
-        // $product->category = $req->category;
-        // $product->image = $req->image->store('img');
-        // $product->save();
-        // return redirect('/admin/index');
+
         $request->validate([
             'product_name' => 'required',
             'product_id' => 'required',
@@ -58,9 +51,8 @@ class AdminController extends Controller
         return view('admin.details.productcrud', compact('details'));
     }
     public function deleteProduct($id){
-        $product = saveProducts::find($id);
-        $product->delete();
-        return-redirect('/admin/productcrud');
+        saveProducts::find($id)->delete();
+        return redirect('/admin/index');
     }
     // For category
 
