@@ -34,8 +34,8 @@
                                     <td>{{ $detail->category}} </td>
                                     <td><img src="{{ asset('Image/'.$detail->image) }}" style="width: 50px; height:50px;"></td>
                                     <td>
-                                        <form action="{{ url('delete',$detail->id) }}" method="POST">
-                                            <a class="btn btn-primary" href="">Edit</a>
+                                        <form action="{{ URL::to('delete/'.$detail->id) }}" method="POST" enctype="multipart/form-data">
+                                            <a class="btn btn-success" href="">Edit</a>
                                             @csrf
                                             
                                             <button type="submit" class="btn btn-danger">Delete</button>

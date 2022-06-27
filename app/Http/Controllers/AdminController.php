@@ -50,9 +50,14 @@ class AdminController extends Controller
         $details = saveProducts::all();
         return view('admin.details.productcrud', compact('details'));
     }
-    public function deleteProduct($id){
-        saveProducts::find($id)->delete();
-        return redirect('/admin/index');
+    public function destroyProduct($id)
+    {
+        // $crud->delete();
+        // return redirect('/');
+        $saveProducts = saveProducts::find($id);
+        $saveProducts->delete();
+
+        return redirect('home-index');
     }
     // For category
 

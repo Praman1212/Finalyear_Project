@@ -4,8 +4,8 @@ use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AuthController;
-use App\Models\auth;
-// use Illuminate\Support\Facades\Auth;
+// use App\Models\auth;
+use Illuminate\Support\Facades\Auth;
 
 // User Route
 Route::get('/',[ProductController::class,'index']);
@@ -22,7 +22,7 @@ Route::get('/product-details',[ProductController::class,'product_details']);
 
 Route::get('/checkout',[ProductController::class,'checkout']);
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home-index');
 
@@ -45,8 +45,9 @@ Route::post('/saveCategory',[AdminController::class,'saveCategory'])->name('save
 
 Route::get('/admin/categorycrud',[AdminController::class,'viewCategory'])->name('view-category');
 // Edit of view products
-Route::get('edit',[AdminController::class],'Edit')->name('edit');
-Route::post('delete/{id}',[AdminController::class],'productDelete')->name('delete-product');
+Route::get('/edit',[AdminController::class],'Edit')->name('edit');
+
+Route::post('/delete/{id}','App\Http\Controllers\AdminController@destroyProduct');
 
 // View Products
 // Route::get('/admin')
