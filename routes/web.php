@@ -23,6 +23,11 @@ Route::get('/product-details', [ProductController::class, 'product_details']);
 Route::get('/checkout', [ProductController::class, 'checkout']);
 Route::get('/cart', [ProductController::class, 'cart'])->name('cart');
 Route::post('/addcart/{id}', [ProductController::class, 'addcart']);
+Route::get('cartItemImage/{id}', [ProductController::class, 'cartItemImage']);
+Route::get('delete/{id}', [ProductController::class, 'deletecart']); //delete item from cart incrementCart
+Route::get('increment/{id}', [ProductController::class, 'incrementCart']);
+Route::get('decrement/{id}', [ProductController::class, 'decrementCart']);
+
 
 
 // Auth::routes();

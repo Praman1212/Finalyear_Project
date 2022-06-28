@@ -58,7 +58,7 @@
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
 								<!-- <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
 								<!-- <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
-								<li><a href="{{ route('cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="{{ route('cart')}}"><i class="fa fa-shopping-cart"></i> Cart[]</a></li>
 								<li><a href="{{ route('login-user')}}"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -113,6 +113,15 @@
 			</div>
 		</div>
 		<!--/header-bottom-->
+
+
+		@if(session()->has('message'))
+		<div class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert">X</button>
+			{{session()->get('message')}}
+
+		</div>
+		@endif
 	</header>
 	<!--/header-->
 
@@ -248,13 +257,7 @@
 					</div>
 				</div>
 
-				@if(session()->has('message'))
-				<div class="alert alert-success">
-					<button type="button" class="close" data-dismiss="alert">X</button>
-					{{session()->get('message')}}
 
-				</div>
-				@endif
 
 				<div class="col-sm-9 padding-right">
 					<div class="features_items">
@@ -291,7 +294,7 @@
 										<form action="{{url('addcart',6)}}" method="post">
 											@csrf
 
-											<input class="btn btn-default add-to-cart" type="submit" value="Add to Cart">
+											<input class="btn btn-default add-to-cart" type="submit" value="Add to Cart" >
 
 										</form>
 									</div>

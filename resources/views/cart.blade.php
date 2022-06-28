@@ -61,7 +61,7 @@
 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
 								<!-- <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
 								<!-- <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
-								<li><a href="{{ route('cart')}}"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="{{ route('cart')}}"><i class="fa fa-shopping-cart"></i> Cart[{{$count}}]</a></li>
 								<li><a href="{{ route('login-user')}}"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
@@ -86,13 +86,13 @@
 						</div>
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
-								<li><a href="{{ URL::to('/') }}" class="active">Home</a></li>
+								<li><a href="{{ URL::to('/') }}">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
 										<li><a href="shop.html">Products</a></li>
 										<li><a href="{{ URL::to('product-details') }}">Product Details</a></li>
 										<li><a href="{{ URL::to('checkout') }}">Checkout</a></li>
-										<li><a href="{{ URL::to('cart') }}">Cart</a></li>
+										<li><a href="{{ URL::to('cart') }}" class="active">Cart</a></li>
 										<li><a href="login.html">Login</a></li>
 									</ul>
 								</li>
@@ -123,7 +123,7 @@
 		<div class="container">
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
-					<li><a href="#">Home</a></li>
+					<li><a href="{{ URL::to('/') }}">Home</a></li>
 					<li class="active">Shopping Cart</li>
 				</ol>
 			</div>
@@ -139,34 +139,48 @@
 							<td></td>
 						</tr>
 					</thead>
+
+					@inject('cartItemImage', 'App\Http\Controllers\ProductController')
+
 					<tbody>
+
+						@foreach($cart as $carts)
+						<tr>
+							@if($count==0)
+							<div class="table-responsive cart_info">No Items in your cart list. Add to cart first.</div>
+
+							@endif
+						</tr>
 						<tr>
 							<td class="cart_product">
-								<a href=""><img src="images/cart/one.png" alt=""></a>
+								<a href=""><img src="{{App\Http\Controllers\ProductController::cartItemImage($carts->product_id)}}" alt=""> </a>
 							</td>
 							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
-								<p>Web ID: 1089772</p>
+								<h4><a href="">{{$carts->product_title}}</a></h4>
+								<p>Product ID: {{$carts->product_id}}</p>
 							</td>
 							<td class="cart_price">
-								<p>$59</p>
+								<p>${{$carts->price}}</p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
-									<a class="cart_quantity_up" href=""> + </a>
-									<input class="cart_quantity_input" type="text" name="quantity" value="1" autocomplete="off" size="2">
-									<a class="cart_quantity_down" href=""> - </a>
+									<a class="cart_quantity_up" href="{{url('increment',$carts->id)}}"> + </a>
+									<input class="cart_quantity_input" type="text" name="quantity" value="{{$carts->quantity}}" autocomplete="off" size="2" min="1">
+									<a class="cart_quantity_down" href="{{url('decrement',$carts->id)}}"> - </a>
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+								<p class="cart_total_price">${{(int)$carts->quantity * (int)$carts->price}}</p>
 							</td>
 							<td class="cart_delete">
-								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
+								<a class="cart_quantity_delete" href="{{url('delete',$carts->id)}}"><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
 
-						<tr>
+						@endforeach
+
+
+						<!-- <tr>
 							<td class="cart_product">
 								<a href=""><img src="images/cart/two.png" alt=""></a>
 							</td>
@@ -215,7 +229,7 @@
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
 			</div>
