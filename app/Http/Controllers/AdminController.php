@@ -48,7 +48,7 @@ class AdminController extends Controller
     public function viewProducts()
     {
         $details = saveProducts::all();
-        return view('admin. .productcrud', compact('details'));
+        return view('admin.details.productcrud', compact('details'));
     }
 
 
