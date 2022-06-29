@@ -8,7 +8,9 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Auth;
 
 // User Route
-Route::get('/',[ProductController::class,'index']);
+Route::get('/',[ProductController::class,'index'])->name('home');
+
+// Auth Routes
 
 Route::get('/login',[AuthController::class,'login'])->name('login-user');
 
@@ -24,13 +26,15 @@ Route::get('/checkout',[ProductController::class,'checkout']);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home-index');
-
 // Admin Routes
 Route::get('/admin/index',[AdminController::class,'index'])->name('home-index');
 
 // Admin View Products
 Route::get('/admin/productcrud',[AdminController::class,'viewProducts'])->name('product-crud');
+
+// Fetching data from saveProduct model to home page
+Route::get('shoesfetch',[HomeController::class,'userProduct'])->name('shoes-fetch');
+
 
 // Add Products
 
@@ -49,9 +53,4 @@ Route::get('/edit',[AdminController::class],'Edit')->name('edit');
 
 Route::post('/delete/{id}','App\Http\Controllers\AdminController@destroyProduct');
 
-// View Products
-// Route::get('/admin')
- 
-// Admin Category
-// Route::get('/admin/category/manageCategory','App\Http\Controllers\AdminController@manageCategory')->name('category/manageCategory');
 

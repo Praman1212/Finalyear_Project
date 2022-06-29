@@ -48,8 +48,12 @@ class AdminController extends Controller
     public function viewProducts()
     {
         $details = saveProducts::all();
-        return view('admin.details.productcrud', compact('details'));
+        return view('admin. .productcrud', compact('details'));
     }
+
+
+    // Details for users page
+
     public function destroyProduct($id)
     {
         // $crud->delete();
@@ -57,7 +61,7 @@ class AdminController extends Controller
         $saveProducts = saveProducts::find($id);
         $saveProducts->delete();
 
-        return redirect('home-index');
+        return redirect('/admin/index');
     }
     // For category
 
@@ -74,8 +78,5 @@ class AdminController extends Controller
     public function viewCategory(){
         $details = saveCategory::all();
         return view('admin.details.categorycrud',compact('details'));
-    }
-    public function deleteCategory(){
-
     }
 }
