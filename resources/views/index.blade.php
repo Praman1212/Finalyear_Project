@@ -408,295 +408,138 @@
 					</div>
 					<!--features_items-->
 
+					<!--category-tab-->
+
 					<div class="category-tab">
-						<!--category-tab-->
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
-								<li class="active"><a href="#shoes" data-toggle="tab">Shoes</a></li>
-								<li><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
+								<li class="active"><a href="#tshirt" data-toggle="tab">T-Shirt</a></li>
+								<li><a href="#blazers" data-toggle="tab">Shoes</a></li>
 								<li><a href="#sunglass" data-toggle="tab">Sunglass</a></li>
-								<li><a href="#kids" data-toggle="tab">Pants</a></li>
-								<li><a href="#poloshirt" data-toggle="tab">Shirts</a></li>
-								<li><a href="#poloshirt" data-toggle="tab">Jackets</a></li>
+								<li><a href="#kids" data-toggle="tab">Pant</a></li>
+								<li><a href="#poloshirt" data-toggle="tab">Shirt</a></li>
 							</ul>
 						</div>
 						<div class="tab-content">
-							<div class="tab-pane fade active in" id="shoes">
+							<div class="tab-pane fade active in" id="tshirt">
+								@foreach($info as $in)
+								@if($in['category'] == 'Tshirt')
+
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/shoes/adidaspuremotion.png" alt="" />
-												<h2>Rs 6000</h2>
-												<p>Adidas Puremotion</p>
+												<img src="{{asset('Image/'.$in->image)}}" alt="" />
+												<h2>Rs {{$in->price}}</h2>
+												<p>{{$in->product_name}}</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/shoes/airjordan11.png" alt="" />
-												<h2>Rs 7500</h2>
-												<p>Air Jordan 1</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/shoes/nikeairmax.png" alt="" />
-												<h2>Rs 7000</h2>
-												<p>Nike Air Max</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/shoes/yezzy.png" alt="" />
-												<h2>RS 13500</h2>
-												<p>Yezzy 700 V3</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-
-										</div>
-									</div>
-								</div>
+								@endif
+								@endforeach
 							</div>
 
-							<div class="tab-pane fade" id="tshirt">
+							<div class="tab-pane fade" id="blazers">
+
+								@foreach($info as $in)
+								@if($in['category'] == 'shoes')
+
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/shirt/jeans.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="{{asset('Image/'.$in->image)}}" alt="" />
+												<h2>Rs {{$in->price}}</h2>
+												<p>{{$in->product_name}}</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/shirt/hmgoepprod.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/shirt/ezgif-4-2600637ea4.png" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/shirt/aaa.jpeg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-
-										</div>
-									</div>
-								</div>
+								@endif
+								@endforeach
 							</div>
 
 							<div class="tab-pane fade" id="sunglass">
+								@foreach($info as $in)
+								@if($in['category'] == 'Glasses')
+
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="{{asset('Image/'.$in->image)}}" alt="" />
+												<h2>Rs {{$in->price}}</h2>
+												<p>{{$in->product_name}}</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-
-										</div>
-									</div>
-								</div>
+								@endif
+								@endforeach
 							</div>
 
 							<div class="tab-pane fade" id="kids">
+								@foreach($info as $in)
+								@if($in['category'] == 'pant')
+
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="{{asset('Image/'.$in->image)}}" alt="" />
+												<h2>Rs {{$in->price}}</h2>
+												<p>{{$in->product_name}}</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
 
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-
-										</div>
-									</div>
-								</div>
+								@endif
+								@endforeach
 							</div>
 
 							<div class="tab-pane fade" id="poloshirt">
+							@foreach($info as $in)
+								@if($in['category'] == 'Shirt')
+								
 								<div class="col-sm-3">
 									<div class="product-image-wrapper">
 										<div class="single-products">
 											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
+												<img src="{{asset('Image/'.$in->image)}}" alt="" />
+												<h2>Rs {{$in->price}}</h2>
+												<p>{{$in->product_name}}</p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 											</div>
-
+											
 										</div>
 									</div>
 								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-											</div>
-
-										</div>
-									</div>
-								</div>
+						
+								@endif
+								@endforeach
 							</div>
 						</div>
 					</div>
+					<!--/category-tab-->
+
 					<!--/category-tab-->
 					<div>
 						<!-- -->
@@ -707,10 +550,13 @@
 						<h2 class="title text-center">Shoes</h2>
 
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-							
+
 							<div class="carousel-inner">
 								<div class="item active">
-								@foreach($info as $in)
+
+
+									@foreach($info as $in)
+									@if($in['category'] == 'shoes')
 
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
@@ -725,6 +571,7 @@
 											</div>
 										</div>
 									</div>
+									@endif
 									@endforeach
 								</div>
 							</div>
@@ -735,7 +582,7 @@
 								<i class="fa fa-angle-right"></i>
 							</a>
 						</div>
-					
+
 					</div>
 					<!--/recommended_items-->
 
